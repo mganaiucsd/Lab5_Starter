@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
-const selectSound = document.querySelector('horn-select');
+const selectSound = document.getElementById('horn-select');
 selectSound.addEventListener('change', (event) => {
   const audio = document.querySelector('.hidden');
   audio.src = `assets/audio/${event.target.value}.mp3`;
