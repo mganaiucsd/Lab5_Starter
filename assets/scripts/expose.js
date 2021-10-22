@@ -2,6 +2,18 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
+const playSound = document.querySelector('button');
+playSound.addEventListener('click', (event) => {
+  const audio = document.querySelector('.hidden');
+  if (audio.src.endsWith('mp3')) {
+    audio.play();
+  }
+  if (audio.src.endsWith('party-horn.mp3')) {
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti();
+  }
+});
+
 function init() {
   const selectSound = document.getElementById('horn-select');
   selectSound.addEventListener('change', (event) => {
@@ -27,15 +39,4 @@ function init() {
     image.src = `assets/icons/volume-level-${level}.svg`;
   });    
   
-  const playSound = document.querySelector('button');
-  playSound.addEventListener('click', (event) => {
-    const audio = document.querySelector('.hidden');
-    if (audio.src.endsWith('mp3')) {
-      audio.play();
-    }
-    if (audio.src.endsWith('party-horn.mp3')) {
-      const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti();
-    }
-  });
 }
