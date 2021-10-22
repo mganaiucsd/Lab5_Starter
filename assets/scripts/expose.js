@@ -2,6 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
+const jsConfetti = new JSConfetti();
 const playSound = document.querySelector('button');
 playSound.addEventListener('click', (event) => {
   const audio = document.querySelector('.hidden');
@@ -9,7 +10,6 @@ playSound.addEventListener('click', (event) => {
     audio.play();
   }
   if (audio.src.endsWith('party-horn.mp3')) {
-    const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti();
   }
 });
