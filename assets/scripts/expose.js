@@ -6,7 +6,7 @@ const playSound = document.querySelector('button');
 playSound.addEventListener('click', (event) => {
   const audio = document.querySelector('.hidden');
   audio.play();
-  console.log(audio.src);
+  console.log('here' + audio.src);
   if (audio.src == 'assets/audio/party-horn.mp3') {
     console.log("enter confetti");
     const jsConfetti = new JSConfetti();
