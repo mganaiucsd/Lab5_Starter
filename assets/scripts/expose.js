@@ -34,7 +34,6 @@ function init() {
       audio.play();
     }
     if (audio.src.endsWith('party-horn.mp3')) {
-      console.log("enter confetti");
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
     }
