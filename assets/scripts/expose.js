@@ -28,11 +28,12 @@ function init() {
   });    
   
   const playSound = document.querySelector('button');
-  playSound.addEventListener('click', event => {
+  playSound.addEventListener('click', (event) => {
     const audio = document.querySelector('.hidden');
     audio.play();
     if (audio.src == 'assets/audio/party-horn.mp3') {
-      new JSConfetti().addConfetti();
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
     }
   });
 }
