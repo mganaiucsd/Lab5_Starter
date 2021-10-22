@@ -31,7 +31,7 @@ function init() {
   playSound.addEventListener('click', event => {
     const audio = document.querySelector('.hidden');
     audio.play();
-    if (audio.src == `assets/audio/party-horn.mp3`) {
+    if (audio.src == 'assets/audio/party-horn.mp3') {
       new JSConfetti().addConfetti();
     }
   });
