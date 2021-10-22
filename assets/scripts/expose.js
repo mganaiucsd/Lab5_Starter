@@ -32,7 +32,7 @@ function init() {
     const audio = document.querySelector('.hidden');
     audio.play();
     if (audio.src == `assets/audio/party-horn.mp3`) {
-      jsConfetti.addConfetti();
+      new JSConfetti().addConfetti();
     }
   });
 }
