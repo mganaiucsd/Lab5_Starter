@@ -5,9 +5,10 @@ window.addEventListener('DOMContentLoaded', init);
 const playSound = document.querySelector('button');
 playSound.addEventListener('click', (event) => {
   const audio = document.querySelector('.hidden');
-  audio.play();
-  console.log('here' + audio.src);
-  if (audio.src == 'assets/audio/party-horn.mp3') {
+  if (audio.src.endsWith('mp3')) {
+    audio.play();
+  }
+  if (audio.src.endsWith('party-horn.mp3')) {
     console.log("enter confetti");
     const jsConfetti = new JSConfetti();
     jsConfetti.addConfetti();
