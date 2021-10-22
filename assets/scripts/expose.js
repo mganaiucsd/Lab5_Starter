@@ -6,15 +6,17 @@ const selectSound = document.querySelector('horn-select');
 selectSound.addEventListener('change', (event) => {
   const audio = document.querySelector('.hidden');
   audio.src = `assets/audio/${event.target.value}.mp3`;
-  const image = document.querySelector('header + img');
+  const image = document.querySelector('section > img');
   image.src = `assets/images/${event.target.value}.svg`;
+  console.log(event.target.value);
+  console.log(selectSound);
 });
 
 const inputVolume = document.querySelector("[type='range']");
 inputVolume.addEventListener('input', (event) => {
   const audio = document.querySelector('.hidden');
   audio.volume = event.target.value/100;
-  const image = document.querySelector('input + img');
+  const image = document.querySelector('div > img');
   let level = 0;
   if (event.target.value < 33) {
     level = 1;
