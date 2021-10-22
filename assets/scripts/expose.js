@@ -28,8 +28,10 @@ function init() {
     const audio = document.querySelector('.hidden');
     audio.volume = event.target.value/100;
     const image = document.querySelector('div > img');
-    let level = 0;
-    if (event.target.value < 33) {
+    var level;
+    if (event.target.value < 1) {
+      level = 0;
+    } else if (event.target.value < 33) {
       level = 1;
     } else if (event.target.value < 67) {
       level = 2;
