@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   var synth = window.speechSynthesis;
-  var inputTxt = document.getElementById("text-to-speak");
+  var inputTxt = document.getElementById('text-to-speak');
   var voiceSelect = document.getElementById('voice-select');
   var utterance = new SpeechSynthesisUtterance();
   var face = document.querySelector('img');
@@ -15,7 +15,7 @@ function init() {
     var voices = synth.getVoices();
     for (var i = 0; i < voices.length; i++) {
       var option = document.createElement('option');
-      option.text = voices[i].name + " (" + voices[i].lang + ")";
+      option.text = voices[i].name + ' (' + voices[i].lang + ')';
       option.value = i;
       voiceSelect.appendChild(option);
     }
