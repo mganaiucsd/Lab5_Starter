@@ -27,7 +27,6 @@ function init() {
 
   inputTxt.addEventListener('input', (event) => {
     utterance.text = event.target.value;
-    console.log(utterance.text);
   });
   
   utterance.addEventListener('end', (event) => {
