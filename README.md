@@ -1,7 +1,7 @@
 # Lab 5 - Starter
 Name: Milan Ganai
 
-[https://github.com/<YOUR-USERNAME-HERE>/github-actions-for-ci/issues](https://github.com/<YOUR-USERNAME-HERE>/github-actions-for-ci/issues)
+[https://github.com/mganaiucsd/github-actions-for-ci/issues/7](https://github.com/mganaiucsd/github-actions-for-ci/issues/7)
 
 [https://mganaiucsd.github.io/Lab5_Starter/expose](https://mganaiucsd.github.io/Lab5_Starter/expose)
 
