@@ -6,25 +6,23 @@ function init() {
   var synth = window.speechSynthesis;
   var inputTxt = document.getElementById('text-to-speak');
   var voiceSelect = document.getElementById('voice-select');
-  var voices = [];
+  var voices = synth.getVoices();
+  console.log(synth.getVoices());
+  for(var i = 0; i < voices.length ; i++) {
+    var option = document.createElement('option');
+    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
-  function populateVoiceList() {
-    voices = synth.getVoices();
-  
-    for(var i = 0; i < voices.length ; i++) {
-      var option = document.createElement('option');
-      option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-  
-      if(voices[i].default) {
-        option.textContent += ' -- DEFAULT';
-      }
-  
-      option.setAttribute('data-lang', voices[i].lang);
-      option.setAttribute('data-name', voices[i].name);
-      voiceSelect.appendChild(option);
+    if(voices[i].default) {
+      option.textContent += ' -- DEFAULT';
     }
+
+    option.setAttribute('data-lang', voices[i].lang);
+    option.setAttribute('data-name', voices[i].name);
+    voiceSelect.appendChild(option);
+    console.log('here');
+
   }
-  populateVoiceList();
+  
   const speak = document.querySelector('button');
   speak.addEventListener('click', (event) => {
     event.preventDefault();
