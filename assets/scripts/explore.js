@@ -34,8 +34,10 @@ function init() {
   });
 
   speak.addEventListener('click', (event) => {
-    face.setAttribute('src', 'assets/images/smiling-open.png');
-    synth.speak(utterance);
+    if (utterance.text != ''){
+      face.setAttribute('src', 'assets/images/smiling-open.png');
+      synth.speak(utterance);
+    }
   });
 }
 
