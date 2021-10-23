@@ -35,7 +35,6 @@ function init() {
 
   speak.addEventListener('click', (event) => {
     if (utterance.text != ''){
-      console.log(utterance.text);
       face.setAttribute('src', 'assets/images/smiling-open.png');
       synth.speak(utterance);
     }
